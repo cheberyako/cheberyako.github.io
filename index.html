@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Анастасия Чеберяко — бизнес-тренер, Воронеж</title>
+<title>Анастасия Чеберяко — бизнес-тренер</title>
 <meta name="description" content="Команда работает на результат без вашего ручного контроля. Обучение, стандарты и инструменты управления. Диагностика 1–1,5 часа, 6 000 ₽.">
 <link rel="canonical" href="https://cheberyako.github.io/">
 <meta name="theme-color" content="#F6EEE7">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Анастасия Чеберяко">
-<meta property="og:title" content="Анастасия Чеберяко — бизнес-тренер, Воронеж">
+<meta property="og:title" content="Анастасия Чеберяко — бизнес-тренер">
 <meta property="og:description" content="Команда работает на результат без вашего ручного контроля. Обучение, стандарты и инструменты управления. Диагностика 1–1,5 часа, 6 000 ₽.">
 <meta property="og:url" content="https://cheberyako.github.io/">
 <meta property="og:image" content="https://cheberyako.github.io/og-cover.jpg">
@@ -71,8 +71,6 @@
   /* 1. Первый экран */
   main{padding-top:clamp(20px,5vw,56px)}
   .hero{display:grid;gap:24px;align-items:center}
-  .hero-art{width:100%;max-width:300px;justify-self:center}
-  .hero-art svg{width:100%;height:auto;display:block;overflow:visible;aspect-ratio:1}
   .hero h1{font-size:clamp(30px,5.4vw,56px);max-width:16ch}
   .hero .lead{margin:18px 0 28px;color:var(--muted-d)}
   .hero .who{font-size:15px;align-items:flex-start;line-height:1.5}
@@ -81,7 +79,7 @@
   .rec{margin-top:10px;font-size:16px;display:flex;gap:10px;align-items:center}
   .rec::before{content:"";width:28px;height:12px;border-radius:999px;background:var(--peach);flex:none}
   @media (max-width:819px){.hero-cta,.card .btn.main,.contacts .btn.main{width:100%;padding:0 14px;gap:10px;white-space:nowrap}.card .btn.main,.contacts .btn.main{font-size:16px}.card{padding:28px 22px}}
-  @media (min-width:820px){.hero{grid-template-columns:1.25fr 1fr;gap:48px}.hero-art{order:2;max-width:420px}}
+  @media (min-width:820px){.hero{grid-template-columns:1.25fr 1fr;gap:48px}}
 
   /* Карточки */
   .card{background:#fff;border-radius:32px;padding:clamp(26px,5.5vw,52px)}
@@ -212,6 +210,38 @@
   @media (min-width:820px){.sticky{left:auto;right:24px;bottom:24px}.sticky .btn{width:auto}}
 
   @media (max-width:759px){.contacts .deco:first-of-type{display:none}.contacts .deco:last-of-type{top:auto!important;bottom:-26px;right:-26px!important}}
+  /* Первый экран: фото во всю ширину, поверх него имя сверху и карточка с фразой */
+  .hero{display:block}
+  .hx-media{position:relative;margin:0 -22px;height:clamp(560px,86svh,780px);overflow:hidden;background:var(--sand)}
+  .hx-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block}
+  .hx-top{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:14px 22px;color:#FBF7F3;text-shadow:0 1px 10px rgba(42,24,32,.45)}
+  .hx-top span{font-weight:600;font-size:16px;letter-spacing:.02em}
+  .hx-top a{font-weight:600;font-size:16px;min-height:44px;display:inline-flex;align-items:center;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+  .hx-card{position:absolute;left:22px;right:22px;bottom:22px;background:var(--bg);padding:26px 24px 24px}
+  .hx-card h1.hook{font-size:clamp(26px,6.6vw,46px);line-height:1.12;max-width:18ch}
+  .hx-card .who{margin:18px 0 0}
+  .hx-top .hx-name{display:flex;flex-direction:column;line-height:1.25}
+  .hx-top small{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.9;margin-top:3px}
+  .hx-lead{margin-top:16px;font-size:clamp(16px,2vw,19px);line-height:1.45;color:var(--muted-d);max-width:34ch}
+  .hx-card h1.hook em{font-style:normal;color:var(--rust)}
+  .hx-card h1.hook::before{content:"";display:block;width:44px;height:3px;background:var(--rust);margin-bottom:20px}
+  .hx-media::before{content:"";position:absolute;left:0;right:0;top:0;height:150px;z-index:1;pointer-events:none;background:linear-gradient(to bottom,rgba(42,24,32,.5),rgba(42,24,32,0))}
+  .hx-top,.hx-card{z-index:2}
+  .hero-text{padding-top:28px}
+  .hero-text .lead{margin-top:0}
+  @media (max-width:819px){main{padding-top:0}}
+  @media (min-width:820px){
+    main{padding-top:24px}
+    .hx-media{margin:0;height:clamp(560px,82vh,720px)}
+    .hx-media img{left:auto;width:62%}
+    .hx-media::before{left:38%}
+    .hx-top span{color:var(--ink);text-shadow:none}
+    .hx-top{padding:20px 32px}
+    .hx-card{left:40px;right:auto;bottom:40px;width:min(560px,60%);padding:36px 36px 32px}
+    .hero-text{display:flex;align-items:center;flex-wrap:wrap;gap:12px 28px;padding-top:36px}
+    .hero-text .cta-note{margin:0}
+    .hx-top small{color:var(--muted)}
+  }
   footer{text-align:center;color:var(--muted);font-size:16px;padding:0 22px 40px}
   footer details{max-width:640px;margin:6px auto 0;text-align:left}
   footer summary{cursor:pointer;display:flex;align-items:center;justify-content:center;min-height:48px;text-decoration:underline;text-underline-offset:4px}
@@ -224,25 +254,15 @@
 
   <!-- Первый экран: польза, главная кнопка -->
   <header class="hero">
-    <div class="hero-art">
-      <svg viewBox="0 0 400 400" width="400" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Анастасия Чеберяко, бизнес-тренер">
-        <defs><clipPath id="ph"><circle cx="200" cy="196" r="150"/></clipPath></defs>
-        <path class="shape" d="M24 260a120 120 0 0 1 240 0z" fill="#F3B6A4"/>
-        <circle class="shape" cx="342" cy="70" r="34" fill="#B4452F"/>
-        <rect class="shape" x="250" y="300" width="150" height="56" rx="28" fill="#3A2230"/>
-        <path class="shape" d="M30 46a64 64 0 0 1 64 64" fill="none" stroke="#7A6168" stroke-width="10" stroke-linecap="round"/>
-        <g class="photo">
-          <circle cx="200" cy="196" r="150" fill="#EBDDD2"/>
-          <image href="portrait.webp" x="50" y="46" width="300" height="300" clip-path="url(#ph)" preserveAspectRatio="xMidYMid slice"/>
-          <circle cx="200" cy="196" r="150" fill="none" stroke="#2A1820" stroke-width="1.5"/>
-        </g>
-        <circle class="shape" cx="70" cy="340" r="14" fill="none" stroke="#2A1820" stroke-width="1.5"/>
-      </svg>
+    <div class="hx-media">
+      <img src="portrait.webp" alt="Анастасия Чеберяко, бизнес-тренер" width="900" height="1350" fetchpriority="high" decoding="async">
+      <div class="hx-top"><span class="hx-name">Анастасия Чеберяко<small>Бизнес-тренер</small></span><a href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D1%83%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0%20%286%20000%20%E2%82%BD%29." target="_blank" rel="noopener">Написать</a></div>
+      <div class="hx-card">
+        <h1 class="hook">Команда работает на&nbsp;результат <em>без вашего ручного контроля</em></h1>
+        <p class="hx-lead">Обучение, стандарты и&nbsp;инструменты управления для собственников и&nbsp;руководителей.</p>
+      </div>
     </div>
-    <div>
-      <div class="label who"><i></i><span>Анастасия Чеберяко<br>бизнес-тренер · Воронеж</span></div>
-      <h1>Команда работает на&nbsp;результат без вашего ручного контроля</h1>
-      <p class="lead">Обучение, стандарты и&nbsp;инструменты управления для собственников и&nbsp;руководителей.</p>
+    <div class="hero-text">
       <a class="btn main hero-cta" href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D1%83%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0%20%286%20000%20%E2%82%BD%29." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3"/></svg> Получить план для команды
       </a>
@@ -471,7 +491,7 @@
 </div>
 
 <footer>
-  Анастасия Чеберяко · бизнес-тренер · Воронеж<br>
+  Анастасия Чеберяко · бизнес-тренер<br>
   Сайт не использует cookie и&nbsp;не собирает персональные данные.
   <details>
     <summary>Политика конфиденциальности</summary>
@@ -509,7 +529,7 @@ window.addEventListener('DOMContentLoaded', function(){
   if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.from('.hero-art .shape', {y: 30, opacity: 0, scale: .9, transformOrigin: '50% 50%', duration: 1.2, ease: 'power3.out', stagger: .08});
+  gsap.from('.hx-card', {y: 30, opacity: 0, duration: 1.1, ease: 'power3.out', delay: .15});
 
   var below = gsap.utils.toArray('.reveal').filter(function(el){ return el.getBoundingClientRect().top > innerHeight; });
   gsap.set(below, {y: 26, opacity: 0});
