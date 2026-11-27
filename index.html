@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Анастасия Чеберяко — бизнес-тренер</title>
-<meta name="description" content="Команда работает на результат без вашего ручного контроля. Обучение, стандарты и инструменты управления. Диагностика 1–1,5 часа, 6 000 ₽.">
+<meta name="description" content="Продажи, сервис и управление, которые приносят бизнесу прибыль. Бизнес-тренер Анастасия Чеберяко. Консультация 1–1,5 часа, 8 000 ₽.">
 <link rel="canonical" href="https://cheberyako.github.io/">
 <meta name="theme-color" content="#F6EEE7">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -13,14 +13,15 @@
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Анастасия Чеберяко">
 <meta property="og:title" content="Анастасия Чеберяко — бизнес-тренер">
-<meta property="og:description" content="Команда работает на результат без вашего ручного контроля. Обучение, стандарты и инструменты управления. Диагностика 1–1,5 часа, 6 000 ₽.">
+<meta property="og:description" content="Продажи, сервис и управление, которые приносят бизнесу прибыль. Бизнес-тренер Анастасия Чеберяко. Консультация 1–1,5 часа, 8 000 ₽.">
 <meta property="og:url" content="https://cheberyako.github.io/">
-<meta property="og:image" content="https://cheberyako.github.io/og-cover.jpg?v=1123c">
+<meta property="og:image" content="https://cheberyako.github.io/og-cover.jpg?v=1127l">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Анастасия Чеберяко, бизнес-тренер">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" as="image" href="portrait.webp?v=1123c" fetchpriority="high">
+<link rel="preload" as="image" href="portrait.webp?v=1127l" fetchpriority="high">
+<script>document.documentElement.className+=" js"</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- Три начертания вместо пяти -->
@@ -111,7 +112,12 @@
   .num-item .cap{display:block;height:12px;width:48px;border-radius:999px;margin-bottom:18px;background:var(--peach)}
   .num-item:nth-child(2) .cap{width:12px;background:var(--plum)}
   .num-item:nth-child(3) .cap{background:transparent;border:1.5px solid var(--plum)}
-  .exp-block{margin-top:56px;padding-top:40px;border-top:1px solid var(--line)}
+  .exprow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px;padding:20px 0 22px;border-top:1.5px solid var(--plum)}
+  .exprow .num{font-size:clamp(32px,9.5vw,60px);color:var(--rust);white-space:nowrap}
+  .exprow + .facts{margin-top:0}
+  .exprow p{font-size:15px;line-height:1.3;color:var(--muted-d);margin-top:6px}
+  .aname{font-family:var(--head);font-weight:700;font-size:clamp(24px,3.4vw,34px);line-height:1.15;letter-spacing:-.01em;margin-bottom:10px}
+  @media (max-width:819px){.about{gap:40px}}
   .nums.exp{margin-top:8px}
   .note{font-size:16px;color:var(--muted);margin-top:24px}
   @media (min-width:820px){.nums{grid-template-columns:repeat(3,1fr)}}
@@ -178,6 +184,10 @@
   .fmt .n{font-family:var(--head);font-size:13px;color:var(--rust-d)}
   .fmt.first .n{color:var(--peach)}
   .fmt .meta{font-size:16px;color:var(--muted)}
+  .fmt .desc{font-size:16px;line-height:1.5}
+  .fmt .one{font-size:15px;font-weight:600;display:flex;gap:8px;align-items:center}
+  .fmt .one::before{content:"";width:14px;height:8px;border-radius:999px;background:var(--rust);flex:none}
+  .fmt.first .one::before{background:var(--peach)}
   .fmt.first .meta{color:#D9C6C0}
   .fmt ul{list-style:none;display:grid;gap:6px;font-size:16px}
   .fmt ul li{display:flex;gap:10px}
@@ -189,7 +199,7 @@
   .fmt.indiv{background:var(--sand)}
   .fmt.indiv .meta{color:var(--muted-d)}
   @media (min-width:700px){.formats{grid-template-columns:1fr 1fr}.fmt.first{grid-column:1/-1}}
-  @media (min-width:1000px){.formats{grid-template-columns:repeat(3,1fr)}.fmt.first{grid-column:span 1}}
+  @media (min-width:700px){.fmt.first{grid-column:span 1}}
 
   /* Контакты */
   .contacts{background:var(--plum);color:var(--bg);border-radius:clamp(150px,30vw,300px) clamp(150px,30vw,300px) 32px 32px;
@@ -265,6 +275,33 @@
     .hero-text .cta-note{margin:0}
     .hx-top small{color:var(--muted)}
   }
+  /* Три направления */
+  .dir3{display:grid;gap:16px;margin-top:32px}
+  .dcard{background:#fff;border-radius:28px;padding:28px 26px;display:flex;flex-direction:column;gap:12px}
+  .dcard .n{font-family:var(--head);font-size:13px;color:var(--rust-d)}
+  .dcard h3{font-family:var(--head);font-weight:700;font-size:22px;letter-spacing:-.01em}
+  .dcard .res{color:var(--muted-d);font-size:17px}
+  .dcard ul{list-style:none;display:grid;gap:6px;font-size:16px;padding-top:12px;border-top:1px solid var(--line)}
+  .dcard ul li{display:flex;gap:10px}
+  .dcard ul li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--rust);margin-top:10px;flex:none}
+  .sysband{margin-top:16px;background:var(--plum);color:var(--bg);border-radius:28px;padding:26px;display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;justify-content:space-between}
+  .sysband p{font-size:18px;max-width:46ch}
+  .sysband b{color:var(--peach);font-weight:600}
+  .sysband a{color:var(--bg)}
+  @media (min-width:820px){.dir3{grid-template-columns:repeat(3,1fr)}}
+  /* Боли по группам */
+  .pgroups{display:grid;gap:28px;margin-top:28px}
+  .pgroup h3{font-family:var(--head);font-weight:700;font-size:20px;margin-bottom:14px}
+  .plist{list-style:none;display:grid;gap:10px}
+  .plist li{background:var(--blush);border-radius:20px;padding:14px 18px;font-size:16px;line-height:1.4}
+  .ptabs{display:none}
+  .js .ptabs{display:flex;gap:8px;margin-top:24px;flex-wrap:wrap}
+  .ptabs button{min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--plum);background:transparent;color:var(--plum);font:600 16px var(--body);cursor:pointer}
+  .ptabs button[aria-selected="true"]{background:var(--plum);color:var(--bg)}
+  .ptabs button:focus-visible{outline:2px solid var(--rust);outline-offset:3px}
+  .psys{margin-top:24px;border-left:3px solid var(--rust);padding:4px 0 4px 18px;font-size:18px;max-width:52ch}
+  @media (max-width:819px){.js .pgroup:not(.on){display:none}.js .pgroup h3{display:none}.js .pgroups{margin-top:16px}}
+  @media (min-width:820px){.pgroups{grid-template-columns:repeat(3,1fr)}.js .ptabs{display:none}}
   footer{text-align:center;color:var(--muted);font-size:16px;padding:0 22px 40px}
   footer details{max-width:640px;margin:6px auto 0;text-align:left}
   footer summary{cursor:pointer;display:flex;align-items:center;justify-content:center;min-height:48px;text-decoration:underline;text-underline-offset:4px}
@@ -275,83 +312,49 @@
 <body>
 <main class="wrap">
 
-  <!-- Первый экран: польза, главная кнопка -->
   <header class="hero">
     <div class="hx-media">
-      <img src="portrait.webp?v=1123c" alt="Анастасия Чеберяко, бизнес-тренер" width="900" height="1350" fetchpriority="high" decoding="async">
-      <div class="hx-top"><span class="hx-name">Анастасия Чеберяко<small>Бизнес-тренер</small></span><a href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D1%83%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0%20%286%20000%20%E2%82%BD%29." target="_blank" rel="noopener">Написать</a></div>
+      <img src="portrait.webp?v=1127l" alt="Анастасия Чеберяко, бизнес-тренер" width="900" height="1350" fetchpriority="high" decoding="async">
+      <div class="hx-top"><span class="hx-name">Анастасия Чеберяко<small>Бизнес-тренер</small></span><a href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21" target="_blank" rel="noopener">Написать</a></div>
       <div class="hx-card">
-        <h1 class="hook">Команда работает на&nbsp;результат <em>без вашего ручного контроля</em></h1>
-        <p class="hx-lead">Обучение, стандарты и&nbsp;инструменты управления для собственников и&nbsp;руководителей</p>
+        <h1 class="hook">Продажи, сервис и&nbsp;управление, <em>которые приносят бизнесу прибыль</em></h1>
+        <p class="hx-lead">Обучаю сотрудников и&nbsp;руководителей, выстраиваю стандарты и&nbsp;систему работы</p>
       </div>
     </div>
     <div class="hero-text">
-      <a class="btn main hero-cta" href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D1%83%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0%20%286%20000%20%E2%82%BD%29." target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3"/></svg> Получить план для команды
+      <a class="btn main hero-cta" href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3"/></svg> Получить консультацию
       </a>
-      <p class="cta-note">Диагностика · 1–1,5 часа · 6&nbsp;000&nbsp;₽</p>
+      <p class="cta-note">Консультация · 1–1,5 часа · 8&nbsp;000&nbsp;₽</p>
       <a class="textlink" href="#formats" style="padding-left:0">Все форматы и&nbsp;цены</a>
     </div>
   </header>
+
+  <!-- Три направления -->
+  <section>
+    <div class="label reveal"><i></i>Чем я занимаюсь</div>
+    <h2 class="reveal">Три направления, которые влияют на&nbsp;прибыль</h2>
+    <div class="dir3">
+      <article class="dcard reveal"><span class="n">01</span><h3>Продажи</h3><p class="res">Сотрудники понимают, как клиент принимает решение, и&nbsp;продают легко, без страха и&nbsp;давления</p>
+        <ul><li>Психология продаж: что движет клиентом</li><li>Техники и этапы продаж</li><li>Коммуникация с клиентом и выявление потребностей</li><li>Работа с возражениями</li><li>Дополнительные продажи и средний чек</li><li>Работа с клиентской базой</li></ul></article>
+      <article class="dcard reveal"><span class="n">02</span><h3>Сервис</h3><p class="res">Клиенты возвращаются и&nbsp;остаются с&nbsp;вами надолго</p>
+        <ul><li>Стандарты обслуживания</li><li>Сценарии общения с клиентом</li><li>Клиентский путь: от первого контакта до повторной покупки</li><li>Система лояльности и удержания клиентов</li><li>Работа с возвращаемостью клиентов</li><li>Контроль качества сервиса</li></ul></article>
+      <article class="dcard reveal"><span class="n">03</span><h3>Управление</h3><p class="res">Руководитель управляет результатом, а&nbsp;команда работает самостоятельно</p>
+        <ul><li>Цели и делегирование</li><li>Показатели и KPI сотрудников</li><li>Планёрки и регулярный менеджмент</li><li>Контроль и результативность</li><li>Мотивация и обратная связь</li><li>Найм, адаптация и обучение новичков</li></ul></article>
+    </div>
+    <div class="sysband reveal">
+      <p><b>Собираю всё в&nbsp;единую систему:</b> стандарты, скрипты, регламенты, обучение и&nbsp;контроль качества</p>
+      <a class="textlink" href="#system">Как это устроено ↓</a>
+    </div>
+  </section>
 
   <!-- С чем приходят -->
   <section>
     <div class="label reveal"><i></i>С чем ко мне приходят</div>
     <h2 class="reveal">Узнаёте свою ситуацию?</h2>
-    <ul class="pains">
-      <li class="reveal"><span>01</span>Сотрудники не выполняют план</li>
-      <li class="reveal"><span>02</span>Продажи держатся на&nbsp;нескольких сильных людях</li>
-      <li class="reveal"><span>03</span>Руководитель погружён в&nbsp;операционку</li>
-      <li class="reveal"><span>04</span>Новички долго выходят на&nbsp;результат</li>
-      <li class="reveal"><span>05</span>Каждый работает по&nbsp;своим правилам</li>
-    </ul>
-    <details class="more">
-      <summary>Ещё 5 ситуаций</summary>
-      <ul class="pains" style="margin-top:10px">
-        <li><span>06</span>Сервис не соответствует ожиданиям</li>
-        <li><span>07</span>Задачи приходится постоянно контролировать</li>
-        <li><span>08</span>Нет единой системы обучения</li>
-        <li><span>09</span>Сильные специалисты не умеют управлять людьми</li>
-        <li><span>10</span>Бизнес готов расти, а&nbsp;система управления нет</li>
-      </ul>
-    </details>
-    <p class="pains-cta reveal">Узнали хотя&nbsp;бы одну? Ниже — что с&nbsp;этим можно сделать.</p>
-  </section>
-
-  <!-- Что получает бизнес -->
-  <section>
-    <div class="label reveal"><i></i>Чем помогаю</div>
-    <h2 class="reveal" style="margin-bottom:32px">Что получает ваш бизнес</h2>
-    <ul class="gains">
-      <li class="reveal">
-        <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="17"/><circle cx="22" cy="22" r="9"/><circle cx="22" cy="22" r="1.6"/></svg>
-        <div><h3>Ясность</h3><p>Команда понимает задачи, ответственность и&nbsp;цели</p></div>
-      </li>
-      <li class="reveal">
-        <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="5" y="9" width="34" height="10" rx="5"/><rect x="5" y="25" width="34" height="10" rx="5"/><path d="M11 14h12M11 30h12"/></svg>
-        <div><h3>Стандарты</h3><p>Продажи и&nbsp;сервис работают по&nbsp;единым правилам</p></div>
-      </li>
-      <li class="reveal">
-        <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M6 36V22a16 16 0 0 1 32 0v14"/><path d="M22 6v8M22 22l7-7"/></svg>
-        <div><h3>Свобода</h3><p>Руководитель выходит из&nbsp;операционки и&nbsp;управляет результатом</p></div>
-      </li>
-      <li class="reveal">
-        <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M4 30h14M8 22h14M12 14h14"/><circle cx="32" cy="22" r="8"/></svg>
-        <div><h3>Скорость</h3><p>Новички быстрее выходят на&nbsp;результат</p></div>
-      </li>
-    </ul>
-    <details class="know reveal">
-      <summary>Что сотрудники понимают после обучения</summary>
-      <ol>
-        <li>Что они должны делать</li>
-        <li>Как правильно выполнять работу</li>
-        <li>За какие результаты отвечают</li>
-        <li>Каких целей нужно достигать</li>
-        <li>По каким правилам работает компания</li>
-        <li>Как оценивать свою эффективность</li>
-      </ol>
-      <p class="after">А руководитель получает инструменты для развития людей и&nbsp;управления результатом.</p>
-    </details>
+    <div class="ptabs" role="tablist" aria-label="Направления"><button type="button" role="tab" id="tab-sales" aria-controls="pg-sales" aria-selected="true">Продажи</button><button type="button" role="tab" id="tab-service" aria-controls="pg-service" aria-selected="false">Сервис</button><button type="button" role="tab" id="tab-mgmt" aria-controls="pg-mgmt" aria-selected="false">Управление</button></div>
+    <div class="pgroups reveal"><div class="pgroup on" id="pg-sales" role="tabpanel" aria-labelledby="tab-sales"><h3>Продажи</h3><ul class="plist"><li>Сотрудники боятся продавать и&nbsp;ждут, пока клиент решится сам</li><li>Не&nbsp;умеют вести диалог: клиент уходит «подумать» и&nbsp;не&nbsp;возвращается</li><li>Не&nbsp;предлагают дополнительные товары и&nbsp;услуги — средний чек стоит на&nbsp;месте</li><li>Никто не&nbsp;следит за&nbsp;показателями продаж: конверсией, средним чеком, планом</li><li>Продажи держатся на&nbsp;одном-двух сильных сотрудниках</li></ul></div><div class="pgroup" id="pg-service" role="tabpanel" aria-labelledby="tab-service"><h3>Сервис</h3><ul class="plist"><li>Сотрудники не&nbsp;понимают, как общаться, чтобы клиент стал постоянным</li><li>Клиенты приходят один раз и&nbsp;больше не&nbsp;возвращаются</li><li>Сервис не&nbsp;дотягивает до&nbsp;ожиданий клиентов и&nbsp;уровня бренда</li><li>Каждый обслуживает по-своему: единых стандартов нет</li><li>С&nbsp;клиентской базой никто не&nbsp;работает: клиенты уходят и&nbsp;забывают о&nbsp;вас</li></ul></div><div class="pgroup" id="pg-mgmt" role="tabpanel" aria-labelledby="tab-mgmt"><h3>Управление</h3><ul class="plist"><li>Руководитель погружён в&nbsp;операционку и&nbsp;не&nbsp;успевает заниматься развитием бизнеса</li><li>Задачи приходится постоянно проверять и&nbsp;контролировать</li><li>Новички долго выходят на&nbsp;результат</li><li>Нет системы обучения и&nbsp;адаптации</li><li>Сильные специалисты стали руководителями, но&nbsp;не&nbsp;умеют управлять</li></ul></div></div>
+    <p class="psys reveal">Знакомо хотя&nbsp;бы несколько пунктов? Значит, продажи, сервис и&nbsp;управление живут отдельно, без общей системы. Её&nbsp;я&nbsp;и&nbsp;помогаю собрать.</p>
   </section>
 
   <!-- Результаты клиентов -->
@@ -359,7 +362,7 @@
     <div class="label reveal"><i></i>Результаты клиентов</div>
     <h2 class="reveal">Что меняется в&nbsp;бизнесе после работы</h2>
     <div class="nums res" style="margin-top:36px">
-      <div class="num-item reveal"><span class="num" data-count="20" data-prefix="+" data-suffix="%">+20%</span><p>к&nbsp;выручке: команда освоила продажи и&nbsp;сервис</p></div>
+      <div class="num-item reveal"><span class="num" data-count="20" data-prefix="+" data-suffix="%">+20%</span><p>к&nbsp;выручке: сотрудники освоили продажи и&nbsp;сервис</p></div>
       <div class="num-item reveal"><span class="num" data-count="10" data-prefix="+" data-suffix="%">+10%</span><p>к&nbsp;конверсии в&nbsp;покупку за&nbsp;счёт работы с&nbsp;клиентской базой</p></div>
       <div class="num-item reveal"><span class="num" data-count="2" data-prefix="×">×2</span><p>рост возвращаемости клиентов в&nbsp;ряде бизнесов</p></div>
     </div>
@@ -368,11 +371,17 @@
 
   <!-- Обо мне и мой опыт -->
   <section>
+    <div class="label reveal"><i></i>Обо мне</div>
     <div class="about">
-    <div class="arch reveal"><img src="stage.webp?v=1123c" alt="Анастасия Чеберяко рассказывает об адаптации сотрудников на мероприятии «Точка опоры»" width="640" height="800" loading="lazy" decoding="async"></div>
+    <div class="arch reveal"><img src="stage.webp?v=1127l" alt="Анастасия Чеберяко рассказывает об адаптации сотрудников на мероприятии «Точка опоры»" width="640" height="800" loading="lazy" decoding="async"></div>
     <div>
-      <div class="label reveal"><i></i>Обо мне</div>
+      <p class="aname reveal">Анастасия Чеберяко</p>
       <p class="big reveal">Бизнес-тренер по&nbsp;управлению, продажам и&nbsp;клиентскому сервису</p>
+      <div class="exprow reveal" aria-label="Мой опыт в цифрах">
+        <div><span class="num" data-count="10" data-suffix="+">10+</span><p>лет опыта в&nbsp;retail</p></div>
+        <div><span class="num" data-count="50" data-suffix="+">50+</span><p>успешных кейсов</p></div>
+        <div><span class="num" data-count="15" data-suffix="+">15+</span><p>бизнес-ниш</p></div>
+      </div>
       <ul class="facts reveal">
         <li>Прошла путь от&nbsp;продавца до&nbsp;руководителя направления в&nbsp;международных компаниях</li>
         <li>Больше 3&nbsp;лет выстраиваю работу людей внутри бизнеса</li>
@@ -383,60 +392,6 @@
       </ul>
     </div>
     </div>
-    <div class="exp-block">
-      <div class="label reveal"><i></i>Мой опыт в цифрах</div>
-    <div class="nums exp">
-      <div class="num-item reveal"><span class="cap"></span><span class="num" data-count="10" data-suffix="+">10+</span><p>лет опыта в&nbsp;retail</p></div>
-      <div class="num-item reveal"><span class="cap"></span><span class="num" data-count="50" data-suffix="+">50+</span><p>успешных кейсов</p></div>
-      <div class="num-item reveal"><span class="cap"></span><span class="num" data-count="15" data-suffix="+">15+</span><p>бизнес-ниш: от&nbsp;fashion и&nbsp;beauty до&nbsp;HoReCa</p></div>
-    </div>
-    </div>
-  </section>
-
-  <!-- Главное предложение: с чего начать -->
-  <section class="card reveal">
-    <div class="label"><i></i>Первый шаг</div>
-    <h2>Диагностика бизнеса и&nbsp;управленческий разбор</h2>
-    <p class="lead sub">Одна встреча на 1–1,5 часа. На&nbsp;выходе план действий. <span class="price" style="color:var(--plum)">6&nbsp;000&nbsp;₽</span></p>
-    <ol class="steps h">
-      <li class="step"><span class="dot"></span><span><small>Шаг 1</small>Изучаем ситуацию и&nbsp;запрос</span></li>
-      <li class="step"><span class="dot"></span><span><small>Шаг 2</small>Анализируем работу сотрудников и&nbsp;руководителя</span></li>
-      <li class="step"><span class="dot"></span><span><small>Шаг 3</small>Определяем приоритеты и&nbsp;план действий</span></li>
-      <li class="step"><span class="dot"></span><span><small>После</small>Поддержка 2&nbsp;дня после встречи</span></li>
-    </ol>
-    <a class="btn main" href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D1%83%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0%20%286%20000%20%E2%82%BD%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3"/></svg> Получить план для команды</a>
-  </section>
-
-  <!-- Направления -->
-  <section>
-    <div class="label reveal"><i></i>Направления работы</div>
-    <h2 class="reveal" style="margin-bottom:28px">Над чем работаем с&nbsp;командой</h2>
-    <div class="dirs">
-      <details class="reveal"><summary><span>01</span>Продажи</summary>
-        <ul><li>Техники и этапы продаж</li><li>Потребности и работа с возражениями</li><li>Переговоры и закрытие сделок</li><li>Работа с клиентской базой</li></ul></details>
-      <details class="reveal"><summary><span>02</span>Клиентский сервис</summary>
-        <ul><li>Стандарты обслуживания</li><li>Сценарии общения с клиентом</li><li>Работа с претензиями</li><li>Контроль качества сервиса</li></ul></details>
-      <details class="reveal"><summary><span>03</span>Стандарты и культура</summary>
-        <ul><li>Брендбук сотрудника</li><li>Регламенты и должностные инструкции</li><li>Правила внутреннего взаимодействия</li><li>База знаний и чек-листы</li></ul></details>
-      <details class="reveal"><summary><span>04</span>Обучение и адаптация</summary>
-        <ul><li>Система адаптации новичков</li><li>Программы обучения</li><li>Проверка знаний</li><li>Регулярное развитие компетенций</li></ul></details>
-      <details class="reveal"><summary><span>05</span>Развитие руководителей</summary>
-        <ul><li>Цели и делегирование</li><li>Контроль и результативность</li><li>Мотивация и обратная связь</li><li>Самостоятельная команда</li></ul></details>
-    </div>
-  </section>
-
-  <!-- Как строим систему -->
-  <section class="card reveal">
-    <div class="label"><i></i>Система работы под ключ</div>
-    <h2>Пять этапов от&nbsp;диагностики до&nbsp;управления</h2>
-    <ol class="steps h h5">
-      <li class="step"><span class="dot"></span><span><small>01</small><b>Диагностика</b><p>Нахожу проблемные зоны и&nbsp;приоритеты</p></span></li>
-      <li class="step"><span class="dot"></span><span><small>02</small><b>Проектирование</b><p>Модель работы под структуру и&nbsp;цели компании</p></span></li>
-      <li class="step"><span class="dot"></span><span><small>03</small><b>Документация</b><p>Брендбук, стандарты, регламенты, чек-листы, база знаний</p></span></li>
-      <li class="step"><span class="dot"></span><span><small>04</small><b>Обучение и&nbsp;внедрение</b><p>Обучаю команду и&nbsp;передаю инструменты</p></span></li>
-      <li class="step"><span class="dot"></span><span><small>05</small><b>Управление</b><p>Учу руководителя делегировать и&nbsp;развивать людей</p></span></li>
-    </ol>
-    <p class="lead">Итог: целостная система и&nbsp;руководитель, который ей управляет.</p>
   </section>
 
   <!-- Форматы и цены -->
@@ -445,52 +400,68 @@
     <h2 class="reveal">От одной встречи до&nbsp;системы под ключ</h2>
     <div class="formats">
       <article class="fmt first reveal">
-        <span class="n">01 · Первый шаг</span>
-        <h3>Диагностика бизнеса и&nbsp;управленческий разбор</h3>
-        <p class="meta">Встреча 1–1,5 часа · для собственников и&nbsp;руководителей</p>
-        <ul><li>Изучение ситуации и запроса</li><li>Анализ работы сотрудников и руководителя</li><li>Приоритетные изменения и план действий</li><li>Поддержка 2 дня после встречи</li></ul>
-        <div class="foot"><span class="price">6&nbsp;000&nbsp;₽</span><a class="btn sm" href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D1%83%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0%20%286%20000%20%E2%82%BD%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3"/></svg> Записаться</a></div>
+        <span class="n">01</span>
+        <h3>Консультация: разбор и&nbsp;диагностика вашей ситуации</h3>
+        <p class="meta">Встреча 1–1,5 часа</p>
+        <p class="one">Один на&nbsp;один: для собственника, руководителя или специалиста</p>
+        <ul><li>Разбираем ваш запрос и ситуацию</li><li>Определяем приоритеты и план действий</li><li>Поддержка 2 дня после встречи</li></ul>
+        <div class="foot"><span class="price">8&nbsp;000&nbsp;₽</span><a class="btn sm" href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3"/></svg> Записаться</a></div>
       </article>
       <article class="fmt reveal">
         <span class="n">02</span>
-        <h3>Корпоративное обучение сотрудников и&nbsp;руководителей</h3>
+        <h3>Корпоративный тренинг по&nbsp;продажам, сервису или управлению</h3>
         <p class="meta">Тренинг 2,5–3 часа для одной группы</p>
-        <ul><li>Программа под специфику бизнеса</li><li>Обучающие материалы</li><li>Практика и разбор ситуаций компании</li><li>Рекомендации по закреплению</li></ul>
-        <div class="foot"><span class="price">от&nbsp;25&nbsp;000&nbsp;₽</span><a class="btn ghost sm" href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BA%D0%BE%D1%80%D0%BF%D0%BE%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9%20%D1%82%D1%80%D0%B5%D0%BD%D0%B8%D0%BD%D0%B3%20%D0%B4%D0%BB%D1%8F%20%D0%BD%D0%B0%D1%88%D0%B5%D0%B9%20%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3"/></svg> Обсудить</a></div>
+        <ul><li>Программа под ваш бизнес и задачу</li><li>Обучающие материалы</li><li>Практика на ситуациях вашей компании</li><li>Рекомендации по закреплению</li></ul>
+        <div class="foot"><span class="price">от&nbsp;25&nbsp;000&nbsp;₽</span><a class="btn ghost sm" href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BA%D0%BE%D1%80%D0%BF%D0%BE%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9%20%D1%82%D1%80%D0%B5%D0%BD%D0%B8%D0%BD%D0%B3%20%D0%BF%D0%BE%20%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D0%B0%D0%BC%2C%20%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D1%83%20%D0%B8%D0%BB%D0%B8%20%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8E" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3"/></svg> Обсудить</a></div>
       </article>
       <article class="fmt reveal">
         <span class="n">03</span>
         <h3>Корпоративные стандарты и&nbsp;система обучения</h3>
         <p class="meta">Проектная работа · цена зависит от&nbsp;объёма</p>
-        <ul><li>Брендбук, стандарты продаж и сервиса</li><li>Инструкции и регламенты</li><li>Адаптация и база знаний</li><li>Чек-листы и контроль качества</li></ul>
-        <div class="foot"><span class="price">от&nbsp;60&nbsp;000&nbsp;₽</span><a class="btn ghost sm" href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0%20%D0%BA%D0%BE%D1%80%D0%BF%D0%BE%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D1%85%20%D1%81%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%D0%BE%D0%B2%20%D0%B8%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B%20%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%8F." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3"/></svg> Обсудить</a></div>
+        <p class="desc">Полная документация компании: всё выстроено чётко и&nbsp;понятно. Новый сотрудник сразу видит, как у&nbsp;вас работают, и&nbsp;быстрее выходит на&nbsp;результат.</p>
+        <ul><li>Брендбук компании и её ценности</li><li>Стандарты продаж и обслуживания клиентов</li><li>Скрипты и сценарии общения с клиентом</li><li>Правила работы с клиентской базой и CRM</li><li>Регламенты, инструкции и&nbsp;<span style="white-space:nowrap">чек-листы</span></li><li>Корпоративная база знаний</li><li>Система найма, адаптации и обучения новичков</li></ul>
+        <div class="foot"><span class="price">от&nbsp;60&nbsp;000&nbsp;₽</span><a class="btn ghost sm" href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%82%20%D0%BA%D0%BE%D1%80%D0%BF%D0%BE%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B5%20%D1%81%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%D1%8B%20%D0%B8%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0%20%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%8F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3"/></svg> Обсудить</a></div>
       </article>
       <article class="fmt reveal">
         <span class="n">04</span>
-        <h3>Комплексное построение системы работы сотрудников</h3>
-        <p class="meta">Индивидуальный проект из&nbsp;нескольких этапов</p>
-        <ul><li>Диагностика и проектирование процессов</li><li>Документы, адаптация и обучение</li><li>Инструменты контроля качества</li><li>Сопровождение внедрения</li></ul>
-        <div class="foot"><span class="price">от&nbsp;150&nbsp;000&nbsp;₽</span><a class="btn ghost sm" href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B%20%D1%81%D0%BE%D1%82%D1%80%D1%83%D0%B4%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3"/></svg> Обсудить</a></div>
+        <h3>Комплексное построение системы под&nbsp;ключ</h3>
+        <p class="meta">Индивидуальный проект из&nbsp;5&nbsp;этапов · <a href="#system">как это устроено ↓</a></p>
+        <ul><li>Диагностика и проектирование процессов</li><li>Стандарты, документы и база знаний</li><li>Обучение сотрудников и руководителей</li><li>Адаптация новичков и контроль качества</li><li>Сопровождение внедрения</li></ul>
+        <div class="foot"><span class="price">от&nbsp;150&nbsp;000&nbsp;₽</span><a class="btn ghost sm" href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B%20%D0%BF%D0%BE%D0%B4%20%D0%BA%D0%BB%D1%8E%D1%87" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3"/></svg> Обсудить</a></div>
       </article>
       <article class="fmt reveal">
         <span class="n">05</span>
         <h3>Регулярное сопровождение собственника и&nbsp;команды</h3>
         <p class="meta">4 рабочие встречи в&nbsp;месяц</p>
         <ul><li>Работа с актуальными задачами</li><li>Разбор сложных ситуаций и кейсов</li><li>Рекомендации руководителю</li></ul>
-        <div class="foot"><span class="price">50&nbsp;000&nbsp;₽/мес.</span><a class="btn ghost sm" href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%80%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D0%B5%20%D1%81%D0%BE%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%D0%BE%D0%B1%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%B8%D0%BA%D0%B0%20%D0%B8%20%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3"/></svg> Обсудить</a></div>
+        <div class="foot"><span class="price">50&nbsp;000&nbsp;₽/мес.</span><a class="btn ghost sm" href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%80%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D0%B5%20%D1%81%D0%BE%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3"/></svg> Обсудить</a></div>
       </article>
       <article class="fmt indiv reveal">
         <span class="n">Индивидуально</span>
         <h3>Сначала определяем, что нужно изменить</h3>
-        <p class="meta">Цена обучения зависит от&nbsp;числа участников и&nbsp;программы. Выезд за&nbsp;пределы Воронежа считается отдельно. Комплексный проект оцениваем после диагностики.</p>
+        <p class="meta">Цена обучения зависит от&nbsp;числа участников и&nbsp;программы. Выезд за&nbsp;пределы Воронежа считается отдельно. Комплексный проект оцениваем после консультации.</p>
       </article>
     </div>
+  </section>
+
+  <!-- Как собираю систему -->
+  <section class="card reveal" id="system">
+    <div class="label"><i></i>Комплексное построение системы под ключ</div>
+    <h2>Продажи, сервис и&nbsp;управление в&nbsp;одной системе</h2>
+    <ol class="steps h h5">
+      <li class="step"><span class="dot"></span><span><small>01</small><b>Диагностика</b><p>Нахожу, где бизнес теряет продажи, клиентов и&nbsp;управляемость</p></span></li>
+      <li class="step"><span class="dot"></span><span><small>02</small><b>Проектирование</b><p>Модель продаж, сервиса и&nbsp;управления под ваш бизнес</p></span></li>
+      <li class="step"><span class="dot"></span><span><small>03</small><b>Документация</b><p>Скрипты, стандарты, брендбук, регламенты, чек-листы</p></span></li>
+      <li class="step"><span class="dot"></span><span><small>04</small><b>Обучение и&nbsp;внедрение</b><p>Обучаю сотрудников и&nbsp;руководителей, передаю инструменты</p></span></li>
+      <li class="step"><span class="dot"></span><span><small>05</small><b>Управление</b><p>Руководитель удерживает результат и&nbsp;развивает людей</p></span></li>
+    </ol>
+    <p class="lead">Итог: всё работает как единая система, а&nbsp;руководитель ей управляет.</p>
   </section>
 
   <!-- Фото с выступления перед контактами -->
   <section class="end-photo">
     <figure class="framed reveal">
-      <img src="end.webp?v=1123c" alt="Анастасия Чеберяко выступает с презентацией перед аудиторией" width="800" height="1000" loading="lazy" decoding="async">
+      <img src="end.webp?v=1127l" alt="Анастасия Чеберяко выступает с презентацией перед аудиторией" width="800" height="1000" loading="lazy" decoding="async">
     </figure>
   </section>
 
@@ -499,10 +470,10 @@
     <svg class="deco" width="130" height="44" viewBox="0 0 130 44" style="left:-34px;top:58%" aria-hidden="true"><rect x="1" y="1" width="128" height="42" rx="21" fill="none" stroke="#F6EEE7" stroke-opacity=".4" stroke-width="1.5"/></svg>
     <svg class="deco" width="70" height="70" viewBox="0 0 70 70" style="right:-20px;top:40%" aria-hidden="true"><circle cx="35" cy="35" r="35" fill="#B4452F"/></svg>
     <div class="label reveal"><i></i>Контакты</div>
-    <h2 class="reveal">Начнём с&nbsp;диагностики вашей команды</h2>
-    <p class="reveal">Встреча 1–1,5 часа, 6&nbsp;000&nbsp;₽. Напишите в&nbsp;Telegram или позвоните.</p>
+    <h2 class="reveal">Начнём с&nbsp;консультации</h2>
+    <p class="reveal">Разберём вашу ситуацию в&nbsp;продажах, сервисе или управлении. 1–1,5 часа, 8&nbsp;000&nbsp;₽.</p>
     <div class="btns reveal">
-      <a class="btn main" href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D1%83%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0%20%286%20000%20%E2%82%BD%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3"/></svg> Получить план для команды</a>
+      <a class="btn main" href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3"/></svg> Получить консультацию</a>
       <a class="btn ghost" href="tel:+79202449242">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
         Позвонить
@@ -518,9 +489,9 @@
 
 <!-- Закреплённая главная кнопка: внизу на телефоне, в углу на компьютере -->
 <div class="sticky" id="sticky" aria-hidden="true">
-  <a class="btn main" href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D1%83%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0%20%286%20000%20%E2%82%BD%29." target="_blank" rel="noopener" tabindex="-1">
-    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3"/></svg> Получить план для команды</span>
-    <small>Диагностика · 6&nbsp;000&nbsp;₽</small>
+  <a class="btn main" href="https://t.me/cheberyaschko?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E" target="_blank" rel="noopener" tabindex="-1">
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3"/></svg> Получить консультацию</span>
+    <small>Консультация · 8&nbsp;000&nbsp;₽</small>
   </a>
 </div>
 
@@ -537,6 +508,15 @@
   </details>
 </footer>
 
+<script>
+// Вкладки «Продажи / Сервис / Управление» на телефоне
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.ptabs [role=tab]'));
+  tabs.forEach(function(b){ b.addEventListener('click',function(){
+    tabs.forEach(function(x){ var on=x===b; x.setAttribute('aria-selected',on); document.getElementById(x.getAttribute('aria-controls')).classList.toggle('on',on); });
+  }); });
+})();
+</script>
 <script>
 // Закреплённая кнопка работает и без GSAP
 (function(){
